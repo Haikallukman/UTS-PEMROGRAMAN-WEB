@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Checkout - Toko Buku</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header card">
+      <div class="brand"><div class="logo">TB</div><div><div style="font-weight:700">Checkout</div><div class="small">Buat / ubah pesanan</div></div></div>
+      <div><button class="btn" onclick="location.href='dashboard.html'">Kembali</button></div>
+    </header>
+    <main>
+      <div class="card">
+        <h3>Item Pesanan</h3>
+        <div id="cartArea"><p class="small-muted">Pilih buku untuk ditambahkan ke pesanan:</p><div id="productList" class="grid"></div></div>
+      </div>
+      <div class="card">
+        <h3>Form Pemesan & Pembayaran</h3>
+        <form id="orderForm" onsubmit="return false;">
+          <div class="form-row">
+            <input id="custName" class="input" placeholder="Nama Pemesan" required>
+            <input id="custPhone" class="input" placeholder="No. Telepon" required>
+          </div>
+          <div class="form-row" style="margin-top:8px">
+            <input id="custAddress" class="input" placeholder="Alamat Lengkap" required>
+            <select id="payMethod" class="select"><option value="transfer">Transfer Bank</option><option value="cod">COD</option></select>
+          </div>
+          <h4 style="margin-top:12px">Ringkasan</h4>
+          <div id="orderSummary" class="small-muted">Belum ada item.</div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn" id="btnPlace">Place Order</button>
+            <button class="btn secondary" id="btnClearCart" type="button">Clear Cart</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard - Toko Buku</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">TB</div><div><div style="font-weight:700">Toko Buku</div><div id="greeting" class="small">Halo</div></div></div>
+      <div><div id="userName" class="small">-</div><div style="margin-top:8px;display:flex;gap:8px"><button class="btn" id="btnToStok">Katalog</button><button class="btn secondary" id="btnLogout">Logout</button></div></div>
+    </header>
+    <main>
+      <div class="card">
+        <h3>Menu Utama</h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn" onclick="location.href='stok.html'">Informasi Stok / Katalog</button>
+          <button class="btn" onclick="location.href='tracking.html'">Tracking Pengiriman</button>
+          <button class="btn" onclick="location.href='checkout.html'">Pemesanan</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Ringkasan</h4>
+        <div class="grid" id="summaryGrid"></div>
+      </div>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

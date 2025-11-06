@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Login - Toko Buku</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header card">
+      <div class="brand"><div class="logo">TB</div><div><div style="font-weight:700">Toko Buku</div><div class="small">Aplikasi pemesanan buku</div></div></div>
+      <div class="small">Frontend Project</div>
+    </header>
+    <main class="card" style="max-width:480px;margin:auto;">
+      <h2>Login</h2>
+      <p class="small-muted">Gunakan email dan password untuk login (cek data di data.js)</p>
+      <form id="loginForm" onsubmit="return false;">
+        <div style="margin-bottom:12px">
+          <label class="small">Email</label>
+          <input id="email" class="input" type="email" required placeholder="email@domain.com">
+        </div>
+        <div style="margin-bottom:12px">
+          <label class="small">Password</label>
+          <input id="password" class="input" type="password" required placeholder="********">
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <button class="btn" id="btnLogin">Login</button>
+          <div>
+            <button class="btn secondary" id="btnForgot" type="button">Lupa Password</button>
+            <button class="btn secondary" id="btnRegister" type="button">Daftar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <div id="modal" class="modal-backdrop"><div class="modal card" id="modalContent"></div></div>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
